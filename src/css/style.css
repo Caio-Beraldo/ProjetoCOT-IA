@@ -1,3 +1,110 @@
-.card{
-    background: #fff;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f8fafc;
+}
+
+/* Área principal */
+main {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Card */
+.card {
+    padding: 50px 40px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* Título */
+.card h1 {
+    margin-bottom: 15px;
+
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #38bdf8;
+}
+
+/* Descrição */
+.card p {
+    margin-bottom: 30px;
+
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+/* Botão */
+.btn-pdf {
+    display: inline-block;
+    padding: 14px 28px;
+
+    background: #0ea5e9;
+    color: #ffffff;
+
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3);
+
+    transition: all 0.3s ease;
+}
+
+.btn-pdf:hover {
+    background: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(14, 165, 233, 0.45);
+}
+
+.btn-pdf:active {
+    transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .card {
+        padding: 35px 25px;
+    }
+
+    .card h1 {
+        font-size: 1.6rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+
+    .btn-pdf {
+        width: 100%;
+        padding: 14px 20px;
+    }
 }
